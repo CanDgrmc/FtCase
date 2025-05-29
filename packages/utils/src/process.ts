@@ -29,7 +29,7 @@ export const executeWithTimeoutAndRetry = async (
       console.error(err);
       retries++;
       console.log(`Retry ${retries}/${maxRetries} in a second`);
-      await wait(1000);
+      await wait(10000);
     }
   }
   throw new Error("Max retries reached");
