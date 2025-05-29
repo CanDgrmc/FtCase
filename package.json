@@ -14,6 +14,8 @@
   },
   "scripts": {
     "build": "lerna run build",
+    "build:packages":"npm run build:types && npm run build:utils && npm run build:data && npm run build:pubsub && npm run build:core",
+    "build:apps": "npm run build:api && npm run build:socket-server && npm run build:socket-client && npm run build:data-provider",
     "clean": "lerna clean",
     "lint": "lerna run lint",
     "test": "lerna run test",
@@ -28,7 +30,11 @@
     "build:data": "lerna run build --scope=@ftcase-sdk/data",
     "build:core": "lerna run build --scope=@ftcase-sdk/core",
     "build:types": "lerna run build --scope=@ftcase-sdk/types",
-    "build:pubsub": "lerna run build --scope=@ftcase-sdk/pubsub"
+    "build:pubsub": "lerna run build --scope=@ftcase-sdk/pubsub",
+    "build:socket-server": "lerna run build --scope=socket-server",
+    "build:socket-client": "lerna run build --scope=socket-client",
+    "build:api": "lerna run build --scope=api",
+    "build:data-provider": "lerna run build --scope=data-provider"
   },
   "dependencies": {
     "amqplib": "^0.10.8",
