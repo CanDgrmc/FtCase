@@ -3,16 +3,14 @@ export const handlePriceUpdate = (ev: string) => {
   updatedSymbols.map((symbolStr) => {
     const symbol = JSON.parse(symbolStr);
 
-    if (symbol.symbol === "DCTTR") {
-      console.log(
-        `[CLIENT]: Price updated: ${
-          symbol.symbol
-        } [${symbol.direction.toUpperCase()}] > from ${symbol.open} to ${
-          symbol.close
-        } with %${symbol.percentage} and daily %${
-          symbol.dailyChangePercentage
-        }. (Time: ${symbol.dataTimestamp})`
-      );
-    }
+    console.log(
+      `[CLIENT]: Price updated: ${
+        symbol.symbol
+      } [${symbol.direction.toUpperCase()}] > from ${symbol.open} to ${
+        symbol.close
+      } with %${symbol.percentage} and daily %${
+        symbol.dailyChangePercentage
+      }. (Time: ${symbol.dataTimestamp})`
+    );
   });
 };

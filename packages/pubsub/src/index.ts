@@ -1,12 +1,10 @@
-import client, {
-  Connection,
-  Channel,
-  ConsumeMessage,
-  ChannelModel,
-} from "amqplib";
 import { IPubSub, IPubSubConfig } from "@ftcase-sdk/types";
-import { process as utilProcess } from "@ftcase-sdk/utils";
-import { createLogger } from "@ftcase-sdk/utils";
+import { createLogger, process as utilProcess } from "@ftcase-sdk/utils";
+import client, {
+  Channel,
+  ChannelModel,
+  ConsumeMessage
+} from "amqplib";
 
 const logger = createLogger("package:pubsub");
 
@@ -29,8 +27,8 @@ export default class PubSubService implements IPubSub {
           `amqp://${this.config.user}:${this.config.password}@${this.config.host}:${this.config.port}`
         );
       })(),
-      5000,
-      3
+      15000,
+      10
     );
 
     this.channel = await this.connection.createChannel();

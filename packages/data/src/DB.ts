@@ -37,14 +37,14 @@ export default class DB implements IDB {
 
   async connect() {
     try {
-   
+
       await utilProcess.executeWithTimeoutAndRetry(
         this.client.authenticate(),
         this.config.connectionTimeout,
         3
       );
       await this.client.query(
-        "SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''))"
+        "SET SESSION sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));"
       );
 
       logger.debug("Connection has been established successfully.");
