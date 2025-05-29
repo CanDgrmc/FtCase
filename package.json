@@ -1,0 +1,42 @@
+{
+  "name": "ftcase",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@types/amqplib": "^0.10.7",
+    "@types/node": "^22.15.21",
+    "lerna": "^8.2.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "lerna clean",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "start": "lerna run start",
+    "dev": "lerna run dev",
+    "dev:watch": "lerna run dev:watch --stream",
+    "api:dev": "lerna run dev:watch --stream --scope=api",
+    "data-provider:dev": "lerna run dev:watch  --stream --scope=data-provider",
+    "socket-server:dev": "lerna run dev:watch  --stream --scope=socket-server",
+    "socket-client:dev": "lerna run dev:watch  --stream --scope=socket-client",
+    "build:utils": "lerna run build --scope=@ftcase-sdk/utils",
+    "build:data": "lerna run build --scope=@ftcase-sdk/data",
+    "build:core": "lerna run build --scope=@ftcase-sdk/core",
+    "build:types": "lerna run build --scope=@ftcase-sdk/types",
+    "build:pubsub": "lerna run build --scope=@ftcase-sdk/pubsub"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.8",
+    "dotenv": "^16.5.0",
+    "mysql2": "^3.14.1",
+    "redis": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}

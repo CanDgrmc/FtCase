@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Can Dgrmc <candgrmc@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "start": "node lib/app.js",
+    "dev": "ts-node src/app.ts",
+    "dev:watch": "tsx watch src/app.ts",
+    "build": "tsc",
+    "test": "node ./__tests__/api.test.js"
+  },
+  "dependencies": {
+    "@ftcase-sdk/core": "0.0.1"
+  }
+}

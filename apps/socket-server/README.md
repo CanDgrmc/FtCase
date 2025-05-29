@@ -1,0 +1,15 @@
+# `socket-server`
+
+## Environment
+
+```bash
+CACHE_HOST=127.0.0.1
+CACHE_PORT=6379
+
+QUEUE_HOST=127.0.0.1
+QUEUE_USER=guest
+QUEUE_PASSWORD=guest
+QUEUE_PORT=5672
+
+PORT=3001
+```

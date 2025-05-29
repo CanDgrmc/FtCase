@@ -1,0 +1,24 @@
+{
+  "name": "data-provider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/app.js",
+    "build": "tsc",
+    "dev:watch": "tsx watch src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ftcase-sdk/core": "^0.0.1",
+    "@ftcase-sdk/data": "^0.0.1",
+    "@ftcase-sdk/pubsub": "^0.0.1",
+    "@ftcase-sdk/types": "^0.0.1",
+    "@ftcase-sdk/utils": "^0.0.1",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.0",
+    "ts-node": "^7.0.1"
+  }
+}

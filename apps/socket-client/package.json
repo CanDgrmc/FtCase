@@ -1,0 +1,25 @@
+{
+  "name": "socket-client",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Can Dgrmc <candgrmc@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/socket-client.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@ftcase-sdk/data": "^0.0.1"
+  },
+  "scripts": {
+    "start": "node lib/app.js",
+    "build": "tsc",
+    "dev:watch": "tsx watch src/app.ts",
+    "test": "node ./__tests__/socket-client.test.js"
+  }
+}

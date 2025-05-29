@@ -1,0 +1,30 @@
+{
+  "name": "@ftcase-sdk/pubsub",
+  "version": "0.0.1",
+  "description": "pubsub service",
+  "author": "Can Dgrmc <candgrmc@gmail.com>",
+  "homepage": "https://github.com/CanDgrmc/FT-Case#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "dependencies": {
+    "@ftcase-sdk/types": "^0.0.1"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CanDgrmc/FT-Case.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/pubsub.test.js",
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/CanDgrmc/FT-Case/issues"
+  }
+}
